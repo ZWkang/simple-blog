@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(sort:*)",
+      "Bash(npm run dev:*)",
+      "Bash(awk:*)",
+      "Bash(pkill:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(openspec list:*)",
+      "Bash(openspec validate:*)",
+      "Bash(openspec show:*)",
+      "Bash(tree:*)",
+      "mcp__codex__codex",
+      "Bash(openspec archive:*)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}

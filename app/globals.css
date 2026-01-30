@@ -1,0 +1,88 @@
+/**
+ * 极简博客主题 - 全局样式
+ *
+ * 设计原则：最小化覆盖，仅定义变量和必要的样式增强
+ * 让 Nextra 主题处理大部分样式，我们只做精细调整
+ */
+
+:root {
+  /* ========== 极简调色板 (浅色模式) ========== */
+  --color-bg: #ffffff;
+  --color-bg-muted: #fafafa;
+  --color-fg: #1a1a1a;
+  --color-fg-muted: #666666;
+  --color-accent: #0066cc;
+  --color-accent-hover: #0052a3;
+  --color-border: #e5e5e5;
+
+  /* 语义化颜色 */
+  --color-success: #16a34a;
+  --color-warning: #ca8a04;
+  --color-info: #0284c7;
+  --color-error: #dc2626;
+
+  /* 布局 */
+  --content-width: 680px;
+
+  /* 间距比例 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+}
+
+/* ========== 深色模式 ========== */
+.dark,
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-bg-muted: #1a1a1a;
+  --color-fg: #e5e5e5;
+  --color-fg-muted: #a0a0a0;
+  --color-accent: #4d9fff;
+  --color-accent-hover: #79b3ff;
+  --color-border: #2a2a2a;
+
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --color-info: #38bdf8;
+  --color-error: #f87171;
+}
+
+/* ========== 仅覆盖 Nextra 主题变量 ========== */
+
+/* 内容区域宽度限制 */
+article {
+  max-width: var(--content-width);
+}
+
+/* 优化行高，提升可读性 */
+article p,
+article li {
+  line-height: 1.75;
+}
+
+/* 选中文本样式 - 经典反色 */
+::selection {
+  background-color: var(--color-fg) !important;
+  color: var(--color-bg) !important;
+}
+
+/* Footer 固定在底部 */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > div:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+article {
+  flex: 1;
+}
