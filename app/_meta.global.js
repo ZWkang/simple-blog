@@ -1,6 +1,7 @@
 export default {
   index: {
-    type: 'page'
+    type: 'page',
+    display: 'hidden'
   },
   posts: {
     type: 'page',
@@ -9,5 +10,8 @@ export default {
         display: 'hidden'
       }
     }
+  },
+  about: {
+    type: 'page'
   }
 }

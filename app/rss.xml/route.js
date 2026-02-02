@@ -7,13 +7,21 @@ const CONFIG = {
   lang: 'en-us'
 }
 
+const escapeXml = (str) =>
+  String(str ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+
 export async function GET() {
   const allPosts = await getPosts()
   const posts = allPosts
     .map(
       post => `    <item>
-        <title>${post.title}</title>
-        <description>${post.frontMatter.description}</description>
+        <title>${escapeXml(post.title)}</title>
+        <description>${escapeXml(post.frontMatter.description)}</description>
         <link>${CONFIG.siteUrl}${post.route}</link>
         <pubDate>${new Date(post.frontMatter.date).toUTCString()}</pubDate>
     </item>`
@@ -32,7 +40,7 @@ ${posts}
 
   return new Response(xml, {
     headers: {
-      'Content-Type': 'application/rss+xml'
+      'Content-Type': 'application/rss+xml; charset=utf-8'
     }
   })
 }

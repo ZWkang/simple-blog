@@ -27,7 +27,7 @@ export default async function RootLayout({ children }) {
             >
             </abbr>{' '}
             {new Date().getFullYear()} © zwkang.
-            <a href="/feed.xml" style={{ float: 'right' }}>
+            <a href="/rss.xml" style={{ float: 'right' }}>
               RSS
             </a>
           </Footer>
