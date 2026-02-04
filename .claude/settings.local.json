@@ -18,7 +18,8 @@
       "Bash(tree:*)",
       "mcp__codex__codex",
       "Bash(openspec archive:*)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Skill(agent-browser)"
     ]
   }
 }
