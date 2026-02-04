@@ -236,7 +236,7 @@ args: "app/layout.jsx"  # 或使用 glob 模式如 "app/**/*.jsx"
 ### 更改站点信息
 编辑 `app/rss.xml/route.js`：
 ```js
-const SITE_URL = 'https://your-domain.com'
+const SITE_URL = 'https://zwkang.blog'
 const SITE_TITLE = 'Your Blog'
 const SITE_DESCRIPTION = 'Your Description'
 ```

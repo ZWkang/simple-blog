@@ -2,7 +2,7 @@ import { getPosts } from '../posts/get-posts.js'
 
 const CONFIG = {
   title: 'My Blog',
-  siteUrl: 'https://your-domain.com',
+  siteUrl: 'https://zwkang.blog',
   description: 'Latest blog posts',
   lang: 'en-us'
 }
