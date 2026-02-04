@@ -1,3 +1,5 @@
+read @CLAUDE.md
+
 <!-- OPENSPEC:START -->
 # OpenSpec Instructions
 

@@ -86,3 +86,65 @@ main,
 article {
   flex: 1;
 }
+
+/* ========== 极简文章列表 ========== */
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+}
+
+.posts-list li {
+  margin: 0;
+}
+
+.posts-list-link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: var(--space-2);
+  margin: 0 calc(var(--space-2) * -1);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--color-fg);
+  transition: background-color 150ms ease;
+}
+
+.posts-list-link:hover {
+  background: var(--color-bg-muted);
+}
+
+.posts-list-link:hover .posts-list-title {
+  color: #ffffff;
+}
+
+/* 浅色模式下 hover 变深黑 */
+:root .posts-list-link:hover .posts-list-title {
+  color: #000000;
+}
+
+.dark .posts-list-link:hover .posts-list-title,
+[data-theme="dark"] .posts-list-link:hover .posts-list-title {
+  color: #ffffff;
+}
+
+.posts-list-date {
+  flex: 0 0 110px;
+  color: var(--color-fg-muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.posts-list-title {
+  color: var(--color-fg);
+}
+
+@media (max-width: 520px) {
+  .posts-list-link {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  .posts-list-date {
+    flex: none;
+  }
+}
