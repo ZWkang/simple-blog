@@ -21,5 +21,6 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Skill(agent-browser)"
     ]
-  }
+  },
+  "plansDirectory": "./docs/plans"
 }
