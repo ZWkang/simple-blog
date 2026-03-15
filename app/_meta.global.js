@@ -11,6 +11,10 @@ export default {
       }
     }
   },
+  'old-posts': {
+    type: 'page',
+    title: 'Old'
+  },
   about: {
     type: 'page'
   }
